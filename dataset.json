@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T00:07:07+08:00",
+ "generated_at": "2026-11-25T00:28:30+08:00",
  "_checks": {
   "realized_caliber": {
    "conclusion": "新格式【已实现盈亏】是仓位生命周期内的累计值, 不是分段值",
