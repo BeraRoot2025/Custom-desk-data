@@ -359,6 +359,7 @@
       <span class="st" id="syncState">正在载入战报…</span>
       <span class="meta num" id="syncTime"></span>
       <span class="meta" id="syncCount"></span>
+      <span class="meta num" id="syncCheck" style="display:none;"></span>
       <button id="refreshBtn" type="button"><span class="ric">⟳</span>刷新数据</button>
     </div>
   </header>
@@ -459,6 +460,7 @@ var SNAPSHOT = {"generated_at":"2026-11-25T00:07:07+08:00","stats":{"total_reali
     "https://raw.githubusercontent.com/BeraRoot2025/Custom-desk-data/main/dataset.json",
     "https://raw.githack.com/BeraRoot2025/Custom-desk-data/main/dataset.json"
   ];
+  var STATUS_REMOTES = REMOTES.map(function(u){ return u.replace("dataset.json", "status.json"); });
   var DATA = SNAPSHOT;
   var liveOk = false;
   var PAGE = 40, shown = PAGE;
@@ -793,10 +795,29 @@ var SNAPSHOT = {"generated_at":"2026-11-25T00:07:07+08:00","stats":{"total_reali
     $("syncTime").textContent = "数据更新于 " + (DATA.generated_at || "").replace("T", " ").slice(0, 19);
     $("syncCount").textContent = liveOk ? "已同步最新战报" : "当前为内置快照";
   }
+  function fetchStatus(stamp){
+    function tryNext(i){
+      if(i >= STATUS_REMOTES.length) return Promise.reject(new Error("all failed"));
+      return fetch(STATUS_REMOTES[i] + "?t=" + stamp, { cache: "no-store" })
+        .then(function(r){ if(!r.ok) throw new Error("bad"); return r.json(); })
+        .then(function(j){ if(!j || !j.checked_at) throw new Error("shape"); return j; })
+        .catch(function(){ return tryNext(i + 1); });
+    }
+    return tryNext(0)
+      .then(function(j){
+        var el = $("syncCheck");
+        el.textContent = "同步检查于 " + String(j.checked_at).replace("T", " ").slice(0, 19);
+        el.style.display = "";
+      })
+      .catch(function(){
+        $("syncCheck").style.display = "none";
+      });
+  }
   function fetchLatest(manual){
     var btn = $("refreshBtn");
     btn.classList.add("spinning");
     var stamp = Date.now();
+    fetchStatus(stamp);
     function tryNext(i){
       if(i >= REMOTES.length) return Promise.reject(new Error("all failed"));
       return fetch(REMOTES[i] + "?t=" + stamp, { cache: "no-store" })
