@@ -209,8 +209,8 @@
 
 <div class="statusbar"><div class="in">
   <span class="sync"><span class="dot busy" id="syncDot"></span><span id="syncText">正在同步…</span></span>
-  <span class="stamp">数据更新于 <b id="stampGen">—</b></span>
-  <span class="stamp" id="stampChkWrap" style="display:none">同步检查于 <b id="stampChk">—</b></span>
+  <span class="stamp">数据更新于 <b id="stampGen">—</b>（北京时间）</span>
+  <span class="stamp" id="stampChkWrap" style="display:none">同步检查于 <b id="stampChk">—</b>（北京时间）</span>
   <button class="refresh" id="btnRefresh" type="button">刷新</button>
 </div></div>
 
@@ -327,9 +327,11 @@ function fmtHM(ts){ return ts.slice(11,16); }
 function fmtHMS(ts){ return ts.slice(11,19); }
 function weekday(ts){ var w=['周日','周一','周二','周三','周四','周五','周六'];
   return w[new Date(tsMs(ts)).getDay()]; }
-function fmtISO(iso){ if(!iso) return ''; var d=new Date(iso); if(isNaN(d)) return iso;
-  function p(n){return (n<10?'0':'')+n;}
-  return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+' '+p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds()); }
+function fmtISO(iso){ if(!iso) return ''; var s=String(iso).trim().replace('T',' ');
+  s=s.replace(/\s*(Z|[+-]\d{2}:?\d{2})\s*$/,'');
+  if(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/.test(s)) return s.slice(0,19);
+  if(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}/.test(s)) return s.slice(0,16);
+  return s; }
 
 function indexMessages(){
   msgById = {};
@@ -383,7 +385,7 @@ function renderStats(){
     '<div class="stat"><div class="n">'+s.days+'<small> 天</small></div><div class="l">覆盖天数</div></div>'+
     '<div class="stat"><div class="n">'+(s.long_count||DATA.long_messages.length)+'</div><div class="l">长篇发言</div></div>'+
     '<div class="stat"><div class="n time">'+esc(fmtMD(s.last_ts))+' '+esc(fmtHMS(s.last_ts))+'</div><div class="l">最近发言</div></div>';
-  document.getElementById('stampGen').textContent = DATA.generated_at || '—';
+  document.getElementById('stampGen').textContent = DATA.generated_at ? fmtISO(DATA.generated_at) : '—';
   document.getElementById('footRange').textContent =
     (s.first_ts||'') + ' ～ ' + (s.last_ts||'');
   if(s.longest_session){
