@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T01:10:27+08:00",
+ "generated_at": "2026-11-26T07:57:52+08:00",
  "_checks": {
   "realized_caliber": {
    "conclusion": "新格式【已实现盈亏】是仓位生命周期内的累计值, 不是分段值",
@@ -364,6 +364,25 @@
   ]
  },
  "current_positions": [
+  {
+   "platform": "币安",
+   "symbol": "牛来USDT",
+   "side": "long",
+   "origin": "open",
+   "open_time": "2026-11-26 07:57:39",
+   "size": 480192.0,
+   "avg_entry": 0.04,
+   "cur_price": 0.04,
+   "unrealized_pnl": 208.95,
+   "unrealized_pct": 1.03,
+   "margin": 20268.54,
+   "leverage_set": 1.0,
+   "actual_leverage": 0.04,
+   "liq_price": 0.0,
+   "realized_so_far": 0.0,
+   "last_update": "2026-11-26 07:57:39",
+   "events": 1
+  },
   {
    "platform": "币安",
    "symbol": "NVDAUSDT",
@@ -4225,6 +4244,25 @@
   },
   {
    "platform": "币安",
+   "symbol": "牛来USDT",
+   "side": "long",
+   "origin": "open",
+   "open_time": "2026-11-26 07:57:39",
+   "close_time": null,
+   "status": "open",
+   "entry_avg": 0.04,
+   "max_size": 480192.0,
+   "margin_peak": 20268.54,
+   "realized_total": 0.0,
+   "return_pct": null,
+   "duration_hours": 0.0,
+   "events": 1,
+   "has_close_event": false,
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
+  },
+  {
+   "platform": "币安",
    "symbol": "NVDAUSDT",
    "side": "long",
    "origin": "open",
@@ -4529,6 +4567,27 @@
   }
  ],
  "events": [
+  {
+   "msg_id": 2773,
+   "time": "2026-11-26 07:57:39",
+   "platform": "币安",
+   "symbol": "牛来USDT",
+   "event": "新开仓",
+   "side": "long",
+   "size_after": 480192.0,
+   "size_before": 0.0,
+   "avg_entry": 0.04,
+   "cur_price": 0.04,
+   "margin": 20268.54,
+   "leverage_set": 1.0,
+   "actual_leverage": 0.04,
+   "liq_price": 0.0,
+   "unrealized_pnl": 208.95,
+   "unrealized_pct": 1.03,
+   "realized_pnl": 0.0,
+   "final_pnl": null,
+   "final_pct": null
+  },
   {
    "msg_id": 2771,
    "time": "2026-11-26 01:09:48",
@@ -42898,9 +42957,9 @@
   }
  ],
  "_meta": {
-  "source_rows": 1820,
-  "parsed_events": 1827,
-  "failed_blocks": 3,
+  "source_rows": 1822,
+  "parsed_events": 1828,
+  "failed_blocks": 4,
   "failures_sample": [
    {
     "msg_id": 455,
@@ -42916,9 +42975,14 @@
     "msg_id": 2772,
     "time": "2026-11-26 01:09:49",
     "reason": "no_blocks"
+   },
+   {
+    "msg_id": 2774,
+    "time": "2026-11-26 07:57:41",
+    "reason": "no_blocks"
    }
   ],
-  "cycles_total": 218,
+  "cycles_total": 219,
   "anomalies": {
    "open_while_open": 15,
    "orphan_events": 7,
