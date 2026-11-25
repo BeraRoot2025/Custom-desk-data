@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T08:41:06+08:00",
+ "generated_at": "2026-11-26T01:10:27+08:00",
  "_checks": {
   "realized_caliber": {
    "conclusion": "新格式【已实现盈亏】是仓位生命周期内的累计值, 不是分段值",
@@ -363,7 +363,27 @@
    }
   ]
  },
- "current_positions": [],
+ "current_positions": [
+  {
+   "platform": "币安",
+   "symbol": "NVDAUSDT",
+   "side": "long",
+   "origin": "open",
+   "open_time": "2026-11-26 01:09:48",
+   "size": 6912.02,
+   "avg_entry": 144.02,
+   "cur_price": 144.27,
+   "unrealized_pnl": 1710.15,
+   "unrealized_pct": 0.34,
+   "margin": 498598.56,
+   "leverage_set": 2.0,
+   "actual_leverage": 1.99,
+   "liq_price": 73.21,
+   "realized_so_far": 0.0,
+   "last_update": "2026-11-26 01:09:48",
+   "events": 1
+  }
+ ],
  "history": [
   {
    "platform": "币安",
@@ -4205,6 +4225,25 @@
   },
   {
    "platform": "币安",
+   "symbol": "NVDAUSDT",
+   "side": "long",
+   "origin": "open",
+   "open_time": "2026-11-26 01:09:48",
+   "close_time": null,
+   "status": "open",
+   "entry_avg": 144.02,
+   "max_size": 6912.02,
+   "margin_peak": 498598.56,
+   "realized_total": 0.0,
+   "return_pct": null,
+   "duration_hours": 0.0,
+   "events": 1,
+   "has_close_event": false,
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
+  },
+  {
+   "platform": "币安",
    "symbol": "ETHUSDT",
    "side": "short",
    "origin": "open",
@@ -4490,6 +4529,27 @@
   }
  ],
  "events": [
+  {
+   "msg_id": 2771,
+   "time": "2026-11-26 01:09:48",
+   "platform": "币安",
+   "symbol": "NVDAUSDT",
+   "event": "新开仓",
+   "side": "long",
+   "size_after": 6912.02,
+   "size_before": 0.0,
+   "avg_entry": 144.02,
+   "cur_price": 144.27,
+   "margin": 498598.56,
+   "leverage_set": 2.0,
+   "actual_leverage": 1.99,
+   "liq_price": 73.21,
+   "unrealized_pnl": 1710.15,
+   "unrealized_pct": 0.34,
+   "realized_pnl": 0.0,
+   "final_pnl": null,
+   "final_pct": null
+  },
   {
    "msg_id": 2768,
    "time": "2026-11-24 20:15:33",
@@ -42838,9 +42898,9 @@
   }
  ],
  "_meta": {
-  "source_rows": 1818,
-  "parsed_events": 1826,
-  "failed_blocks": 2,
+  "source_rows": 1820,
+  "parsed_events": 1827,
+  "failed_blocks": 3,
   "failures_sample": [
    {
     "msg_id": 455,
@@ -42851,9 +42911,14 @@
     "msg_id": 2769,
     "time": "2026-11-24 20:15:36",
     "reason": "no_blocks"
+   },
+   {
+    "msg_id": 2772,
+    "time": "2026-11-26 01:09:49",
+    "reason": "no_blocks"
    }
   ],
-  "cycles_total": 217,
+  "cycles_total": 218,
   "anomalies": {
    "open_while_open": 15,
    "orphan_events": 7,
