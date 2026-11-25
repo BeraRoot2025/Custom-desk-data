@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T00:28:30+08:00",
+ "generated_at": "2026-11-25T08:41:06+08:00",
  "_checks": {
   "realized_caliber": {
    "conclusion": "新格式【已实现盈亏】是仓位生命周期内的累计值, 不是分段值",
@@ -83,7 +83,7 @@
   ],
   "notes": [
    "FOMO (Hyperliquid 侧) 的币种写作 BTC / ETH / ZEC / xyz:* , 与币安 USDT 永续是不同市场, 按原文分开统计, 未合并",
-   "当前持仓仅剩 1 个: XAUUSDT 多单 (origin=preexisting), 最后动态 2026-09-02, 之后频道再无该仓位帖子, 平仓帖未捕获, 按数据原样保留为 open, 使用时注意它可能是已平仓但漏帖",
+   "XAUUSDT 多单 (origin=preexisting, 最后动态 2026-09-02, 平仓帖未捕获) 已按 2026-11-24 20:15 的零持仓快照帖 (msg 2769, 持仓数量 0) 关闭 (ended_by_snapshot=true), 不计入盈亏统计; 当前无未平仓位 (用户 2026-11-25 亲口确认)",
    "15 个周期被同币种新开仓顶替结束 (ended_by_reopen=true, 无平仓帖), 不计入已平仓统计; 11 个周期为回填起点前存量仓 (origin=preexisting)",
    "2026-06-18 有一张全字段为『未知』的坏帖, 已按解析失败剔除 (unknown_symbol_post)",
    "1817 行源数据共拆出 1827 个仓位块 (10 张帖含 2 个仓位块), 其中 1 块解析失败, 最终 1826 条结构化事件"
@@ -363,28 +363,27 @@
    }
   ]
  },
- "current_positions": [
+ "current_positions": [],
+ "history": [
   {
    "platform": "币安",
    "symbol": "XAUUSDT",
    "side": "long",
    "origin": "preexisting",
    "open_time": "2026-09-02 12:39:36",
-   "size": 178.937,
-   "avg_entry": 4337.57,
-   "cur_price": 4331.52,
-   "unrealized_pnl": -1083.16,
-   "unrealized_pct": -0.56,
-   "margin": 193767.24,
-   "leverage_set": 4.0,
-   "actual_leverage": null,
-   "liq_price": null,
-   "realized_so_far": null,
-   "last_update": "2026-09-02 12:39:36",
-   "events": 2
-  }
- ],
- "history": [
+   "close_time": "2026-11-24 20:15:36",
+   "status": "closed",
+   "entry_avg": 4337.57,
+   "max_size": 178.937,
+   "margin_peak": 193767.24,
+   "realized_total": null,
+   "return_pct": null,
+   "duration_hours": 0.0,
+   "events": 2,
+   "has_close_event": false,
+   "ended_by_reopen": false,
+   "ended_by_snapshot": true
+  },
   {
    "platform": "币安",
    "symbol": "SKHYNIXUSDT",
@@ -401,7 +400,8 @@
    "duration_hours": 10.21,
    "events": 10,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -419,7 +419,8 @@
    "duration_hours": 1.19,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -437,7 +438,8 @@
    "duration_hours": 2.53,
    "events": 9,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -455,7 +457,8 @@
    "duration_hours": 15.46,
    "events": 7,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -473,7 +476,8 @@
    "duration_hours": 36.93,
    "events": 18,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -491,7 +495,8 @@
    "duration_hours": 1.24,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -509,7 +514,8 @@
    "duration_hours": 2.8,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -527,7 +533,8 @@
    "duration_hours": 0.44,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -545,7 +552,8 @@
    "duration_hours": 13.04,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -563,7 +571,8 @@
    "duration_hours": 6.66,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -581,7 +590,8 @@
    "duration_hours": 6.64,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -599,7 +609,8 @@
    "duration_hours": 3.21,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "OKX",
@@ -617,7 +628,8 @@
    "duration_hours": 47.35,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -635,7 +647,8 @@
    "duration_hours": 92.82,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -653,7 +666,8 @@
    "duration_hours": 31.52,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -671,7 +685,8 @@
    "duration_hours": 9.18,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -689,7 +704,8 @@
    "duration_hours": 21.03,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -707,7 +723,8 @@
    "duration_hours": 7.64,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -725,7 +742,8 @@
    "duration_hours": 46.61,
    "events": 10,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -743,7 +761,8 @@
    "duration_hours": 59.67,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -761,7 +780,8 @@
    "duration_hours": 25.06,
    "events": 9,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -779,7 +799,8 @@
    "duration_hours": 3.96,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -797,7 +818,8 @@
    "duration_hours": 1.11,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -815,7 +837,8 @@
    "duration_hours": 29.45,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -833,7 +856,8 @@
    "duration_hours": 3.72,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -851,7 +875,8 @@
    "duration_hours": 24.19,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -869,7 +894,8 @@
    "duration_hours": 13.18,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -887,7 +913,8 @@
    "duration_hours": 117.42,
    "events": 10,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -905,7 +932,8 @@
    "duration_hours": 5.11,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -923,7 +951,8 @@
    "duration_hours": 5.3,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -941,7 +970,8 @@
    "duration_hours": 1.82,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -959,7 +989,8 @@
    "duration_hours": 24.82,
    "events": 8,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -977,7 +1008,8 @@
    "duration_hours": 132.55,
    "events": 10,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -995,7 +1027,8 @@
    "duration_hours": 68.87,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1013,7 +1046,8 @@
    "duration_hours": 0.0,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1031,7 +1065,8 @@
    "duration_hours": 44.12,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1049,7 +1084,8 @@
    "duration_hours": 19.5,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1067,7 +1103,8 @@
    "duration_hours": 322.47,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1085,7 +1122,8 @@
    "duration_hours": 35.05,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1103,7 +1141,8 @@
    "duration_hours": 25.07,
    "events": 7,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1121,7 +1160,8 @@
    "duration_hours": 23.65,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1139,7 +1179,8 @@
    "duration_hours": 82.68,
    "events": 12,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1157,7 +1198,8 @@
    "duration_hours": 14.56,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1175,7 +1217,8 @@
    "duration_hours": 62.89,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1193,7 +1236,8 @@
    "duration_hours": 21.51,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1211,7 +1255,8 @@
    "duration_hours": 23.33,
    "events": 12,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1229,7 +1274,8 @@
    "duration_hours": 4.28,
    "events": 10,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1247,7 +1293,8 @@
    "duration_hours": 23.67,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1265,7 +1312,8 @@
    "duration_hours": 7.96,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1283,7 +1331,8 @@
    "duration_hours": 7.6,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1301,7 +1350,8 @@
    "duration_hours": 90.08,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1319,7 +1369,8 @@
    "duration_hours": 17.66,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1337,7 +1388,8 @@
    "duration_hours": 2.72,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1355,7 +1407,8 @@
    "duration_hours": 44.22,
    "events": 264,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1373,7 +1426,8 @@
    "duration_hours": 61.49,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1391,7 +1445,8 @@
    "duration_hours": 33.54,
    "events": 8,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1409,7 +1464,8 @@
    "duration_hours": 0.61,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1427,7 +1483,8 @@
    "duration_hours": 31.72,
    "events": 17,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1445,7 +1502,8 @@
    "duration_hours": 21.6,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1463,7 +1521,8 @@
    "duration_hours": 21.23,
    "events": 7,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1481,7 +1540,8 @@
    "duration_hours": 5.02,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1499,7 +1559,8 @@
    "duration_hours": 11.94,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1517,7 +1578,8 @@
    "duration_hours": 6.93,
    "events": 10,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1535,7 +1597,8 @@
    "duration_hours": 57.34,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1553,7 +1616,8 @@
    "duration_hours": 23.39,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1571,7 +1635,8 @@
    "duration_hours": 25.33,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1589,7 +1654,8 @@
    "duration_hours": 9.12,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1607,7 +1673,8 @@
    "duration_hours": 9.62,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1625,7 +1692,8 @@
    "duration_hours": 9.6,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1643,7 +1711,8 @@
    "duration_hours": 2.4,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1661,7 +1730,8 @@
    "duration_hours": 7.96,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1679,7 +1749,8 @@
    "duration_hours": 2.55,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1697,7 +1768,8 @@
    "duration_hours": 2.57,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1715,7 +1787,8 @@
    "duration_hours": 0.06,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1733,7 +1806,8 @@
    "duration_hours": 0.96,
    "events": 11,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1751,7 +1825,8 @@
    "duration_hours": 15.81,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1769,7 +1844,8 @@
    "duration_hours": 2.19,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1787,7 +1863,8 @@
    "duration_hours": 0.3,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1805,7 +1882,8 @@
    "duration_hours": 2.19,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1823,7 +1901,8 @@
    "duration_hours": 23.68,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1841,7 +1920,8 @@
    "duration_hours": 31.21,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1859,7 +1939,8 @@
    "duration_hours": 0.0,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1877,7 +1958,8 @@
    "duration_hours": 10.69,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1895,7 +1977,8 @@
    "duration_hours": 61.3,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1913,7 +1996,8 @@
    "duration_hours": 38.84,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1931,7 +2015,8 @@
    "duration_hours": 3.22,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1949,7 +2034,8 @@
    "duration_hours": 13.28,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1967,7 +2053,8 @@
    "duration_hours": 25.51,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -1985,7 +2072,8 @@
    "duration_hours": 25.3,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2003,7 +2091,8 @@
    "duration_hours": 23.58,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2021,7 +2110,8 @@
    "duration_hours": 0.95,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2039,7 +2129,8 @@
    "duration_hours": 9.3,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2057,7 +2148,8 @@
    "duration_hours": 21.01,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2075,7 +2167,8 @@
    "duration_hours": 10.48,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2093,7 +2186,8 @@
    "duration_hours": 43.55,
    "events": 7,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2111,7 +2205,8 @@
    "duration_hours": 3.23,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2129,7 +2224,8 @@
    "duration_hours": 7.32,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2147,7 +2243,8 @@
    "duration_hours": 0.01,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2165,7 +2262,8 @@
    "duration_hours": 39.64,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2183,7 +2281,8 @@
    "duration_hours": 98.33,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2201,7 +2300,8 @@
    "duration_hours": 36.16,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2219,7 +2319,8 @@
    "duration_hours": 79.82,
    "events": 10,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2237,7 +2338,8 @@
    "duration_hours": 1.9,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2255,7 +2357,8 @@
    "duration_hours": 0.41,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2273,7 +2376,8 @@
    "duration_hours": 6.67,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2291,7 +2395,8 @@
    "duration_hours": 0.78,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2309,7 +2414,8 @@
    "duration_hours": 0.76,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2327,7 +2433,8 @@
    "duration_hours": 1.33,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2345,7 +2452,8 @@
    "duration_hours": 5.75,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2363,7 +2471,8 @@
    "duration_hours": 5.23,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2381,7 +2490,8 @@
    "duration_hours": 23.77,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2399,7 +2509,8 @@
    "duration_hours": 113.32,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2417,7 +2528,8 @@
    "duration_hours": 1.9,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2435,7 +2547,8 @@
    "duration_hours": 9.73,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2453,7 +2566,8 @@
    "duration_hours": 5.58,
    "events": 7,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2471,7 +2585,8 @@
    "duration_hours": 0.17,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2489,7 +2604,8 @@
    "duration_hours": 5.88,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2507,7 +2623,8 @@
    "duration_hours": 14.26,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2525,7 +2642,8 @@
    "duration_hours": 11.31,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2543,7 +2661,8 @@
    "duration_hours": 23.84,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2561,7 +2680,8 @@
    "duration_hours": 13.78,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2579,7 +2699,8 @@
    "duration_hours": 70.42,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2597,7 +2718,8 @@
    "duration_hours": 56.83,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2615,7 +2737,8 @@
    "duration_hours": 9.18,
    "events": 13,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2633,7 +2756,8 @@
    "duration_hours": 51.57,
    "events": 11,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2651,7 +2775,8 @@
    "duration_hours": 5.46,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2669,7 +2794,8 @@
    "duration_hours": 23.92,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2687,7 +2813,8 @@
    "duration_hours": 3.16,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2705,7 +2832,8 @@
    "duration_hours": 72.91,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2723,7 +2851,8 @@
    "duration_hours": 5.14,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2741,7 +2870,8 @@
    "duration_hours": 17.24,
    "events": 24,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2759,7 +2889,8 @@
    "duration_hours": 1.75,
    "events": 8,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2777,7 +2908,8 @@
    "duration_hours": 22.86,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2795,7 +2927,8 @@
    "duration_hours": 2.92,
    "events": 24,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2813,7 +2946,8 @@
    "duration_hours": 11.42,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2831,7 +2965,8 @@
    "duration_hours": 6.83,
    "events": 571,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2849,7 +2984,8 @@
    "duration_hours": 4.06,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2867,7 +3003,8 @@
    "duration_hours": 2.23,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2885,7 +3022,8 @@
    "duration_hours": 17.1,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2903,7 +3041,8 @@
    "duration_hours": 2.69,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2921,7 +3060,8 @@
    "duration_hours": 3.48,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2939,7 +3079,8 @@
    "duration_hours": 0.34,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2957,7 +3098,8 @@
    "duration_hours": 95.26,
    "events": 10,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2975,7 +3117,8 @@
    "duration_hours": 21.04,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -2993,7 +3136,8 @@
    "duration_hours": 3.47,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3011,7 +3155,8 @@
    "duration_hours": 7.89,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3029,7 +3174,8 @@
    "duration_hours": 12.04,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3047,7 +3193,8 @@
    "duration_hours": 19.8,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3065,7 +3212,8 @@
    "duration_hours": 19.82,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3083,7 +3231,8 @@
    "duration_hours": 22.94,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3101,7 +3250,8 @@
    "duration_hours": 68.53,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3119,7 +3269,8 @@
    "duration_hours": 31.48,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3137,7 +3288,8 @@
    "duration_hours": 10.51,
    "events": 9,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3155,7 +3307,8 @@
    "duration_hours": 10.26,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3173,7 +3326,8 @@
    "duration_hours": 10.27,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3191,7 +3345,8 @@
    "duration_hours": 24.52,
    "events": 16,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3209,7 +3364,8 @@
    "duration_hours": 3.26,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3227,7 +3383,8 @@
    "duration_hours": 24.03,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3245,7 +3402,8 @@
    "duration_hours": 100.29,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3263,7 +3421,8 @@
    "duration_hours": 253.97,
    "events": 12,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3281,7 +3440,8 @@
    "duration_hours": 9.54,
    "events": 7,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3299,7 +3459,8 @@
    "duration_hours": 0.37,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3317,7 +3478,8 @@
    "duration_hours": 1.77,
    "events": 14,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3335,7 +3497,8 @@
    "duration_hours": 8.65,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3353,7 +3516,8 @@
    "duration_hours": 2.04,
    "events": 8,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3371,7 +3535,8 @@
    "duration_hours": 0.0,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3389,7 +3554,8 @@
    "duration_hours": 15.84,
    "events": 6,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3407,7 +3573,8 @@
    "duration_hours": 7.61,
    "events": 7,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3425,7 +3592,8 @@
    "duration_hours": 46.69,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3443,7 +3611,8 @@
    "duration_hours": 5.31,
    "events": 7,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3461,7 +3630,8 @@
    "duration_hours": 0.0,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3479,7 +3649,8 @@
    "duration_hours": 66.12,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3497,7 +3668,8 @@
    "duration_hours": 5.04,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3515,7 +3687,8 @@
    "duration_hours": 8.98,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3533,7 +3706,8 @@
    "duration_hours": 9.14,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3551,7 +3725,8 @@
    "duration_hours": 0.19,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3569,7 +3744,8 @@
    "duration_hours": 3.56,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3587,7 +3763,8 @@
    "duration_hours": 1.88,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3605,7 +3782,8 @@
    "duration_hours": 1.86,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3623,7 +3801,8 @@
    "duration_hours": 4.06,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3641,7 +3820,8 @@
    "duration_hours": 10.82,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3659,7 +3839,8 @@
    "duration_hours": 4.08,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3677,7 +3858,8 @@
    "duration_hours": 0.63,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3695,7 +3877,8 @@
    "duration_hours": 1.18,
    "events": 32,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3713,7 +3896,8 @@
    "duration_hours": 12.88,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3731,7 +3915,8 @@
    "duration_hours": 12.85,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3749,7 +3934,8 @@
    "duration_hours": 47.2,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3767,7 +3953,8 @@
    "duration_hours": 6.02,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3785,7 +3972,8 @@
    "duration_hours": 3.45,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3803,7 +3991,8 @@
    "duration_hours": 2.41,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3821,7 +4010,8 @@
    "duration_hours": 1.04,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3839,7 +4029,8 @@
    "duration_hours": 1.19,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3857,7 +4048,8 @@
    "duration_hours": 11.23,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3875,7 +4067,8 @@
    "duration_hours": 8.21,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3893,7 +4086,8 @@
    "duration_hours": 59.04,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3911,7 +4105,8 @@
    "duration_hours": 50.63,
    "events": 5,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3929,7 +4124,8 @@
    "duration_hours": 17.18,
    "events": 4,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3947,7 +4143,8 @@
    "duration_hours": 0.57,
    "events": 3,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3965,7 +4162,8 @@
    "duration_hours": 11.92,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -3983,7 +4181,8 @@
    "duration_hours": 0.14,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4001,7 +4200,8 @@
    "duration_hours": 0.0,
    "events": 2,
    "has_close_event": true,
-   "ended_by_reopen": false
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4019,7 +4219,8 @@
    "duration_hours": 1.4,
    "events": 2,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4037,25 +4238,8 @@
    "duration_hours": 0.0,
    "events": 1,
    "has_close_event": false,
-   "ended_by_reopen": true
-  },
-  {
-   "platform": "币安",
-   "symbol": "XAUUSDT",
-   "side": "long",
-   "origin": "preexisting",
-   "open_time": "2026-09-02 12:39:36",
-   "close_time": null,
-   "status": "open",
-   "entry_avg": 4337.57,
-   "max_size": 178.937,
-   "margin_peak": 193767.24,
-   "realized_total": null,
-   "return_pct": null,
-   "duration_hours": 0.0,
-   "events": 2,
-   "has_close_event": false,
-   "ended_by_reopen": false
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4073,7 +4257,8 @@
    "duration_hours": 0.0,
    "events": 1,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4091,7 +4276,8 @@
    "duration_hours": 0.0,
    "events": 1,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4109,7 +4295,8 @@
    "duration_hours": 7.12,
    "events": 3,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4127,7 +4314,8 @@
    "duration_hours": 46.78,
    "events": 3,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4145,7 +4333,8 @@
    "duration_hours": 0.0,
    "events": 1,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4163,7 +4352,8 @@
    "duration_hours": 0.0,
    "events": 1,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4181,7 +4371,8 @@
    "duration_hours": 0.02,
    "events": 2,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4199,7 +4390,8 @@
    "duration_hours": 0.02,
    "events": 3,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4217,7 +4409,8 @@
    "duration_hours": 0.01,
    "events": 2,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4235,7 +4428,8 @@
    "duration_hours": 0.0,
    "events": 1,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4253,7 +4447,8 @@
    "duration_hours": 77.59,
    "events": 12,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4271,7 +4466,8 @@
    "duration_hours": 96.16,
    "events": 10,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   },
   {
    "platform": "币安",
@@ -4289,7 +4485,8 @@
    "duration_hours": 2.02,
    "events": 8,
    "has_close_event": false,
-   "ended_by_reopen": true
+   "ended_by_reopen": true,
+   "ended_by_snapshot": false
   }
  ],
  "events": [
@@ -42641,14 +42838,19 @@
   }
  ],
  "_meta": {
-  "source_rows": 1817,
+  "source_rows": 1818,
   "parsed_events": 1826,
-  "failed_blocks": 1,
+  "failed_blocks": 2,
   "failures_sample": [
    {
     "msg_id": 455,
     "time": "2026-06-18 03:53:01",
     "reason": "unknown_symbol_post"
+   },
+   {
+    "msg_id": 2769,
+    "time": "2026-11-24 20:15:36",
+    "reason": "no_blocks"
    }
   ],
   "cycles_total": 217,
