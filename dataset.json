@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T07:57:52+08:00",
+ "generated_at": "2026-11-26T14:44:35+08:00",
  "_checks": {
   "realized_caliber": {
    "conclusion": "新格式【已实现盈亏】是仓位生命周期内的累计值, 不是分段值",
@@ -90,11 +90,11 @@
   ]
  },
  "stats": {
-  "total_realized_closed": 2614428.41,
-  "closed_count": 200,
-  "win_count": 130,
+  "total_realized_closed": 2616329.76,
+  "closed_count": 201,
+  "win_count": 131,
   "loss_count": 70,
-  "win_rate": 0.65,
+  "win_rate": 0.6517,
   "best_trade": {
    "symbol": "ETHUSDT",
    "platform": "币安",
@@ -229,6 +229,12 @@
     "win_rate": 0.3333
    },
    {
+    "symbol": "牛来USDT",
+    "trades": 1,
+    "realized": 1901.35,
+    "win_rate": 1.0
+   },
+   {
     "symbol": "ZEC",
     "trades": 1,
     "realized": 412.55,
@@ -358,31 +364,12 @@
    },
    {
     "month": "2026-11",
-    "realized": 596625.18,
-    "trades": 28
+    "realized": 598526.53,
+    "trades": 29
    }
   ]
  },
  "current_positions": [
-  {
-   "platform": "币安",
-   "symbol": "牛来USDT",
-   "side": "long",
-   "origin": "open",
-   "open_time": "2026-11-26 07:57:39",
-   "size": 480192.0,
-   "avg_entry": 0.04,
-   "cur_price": 0.04,
-   "unrealized_pnl": 208.95,
-   "unrealized_pct": 1.03,
-   "margin": 20268.54,
-   "leverage_set": 1.0,
-   "actual_leverage": 0.04,
-   "liq_price": 0.0,
-   "realized_so_far": 0.0,
-   "last_update": "2026-11-26 07:57:39",
-   "events": 1
-  },
   {
    "platform": "币安",
    "symbol": "NVDAUSDT",
@@ -404,6 +391,25 @@
   }
  ],
  "history": [
+  {
+   "platform": "币安",
+   "symbol": "牛来USDT",
+   "side": "long",
+   "origin": "open",
+   "open_time": "2026-11-26 07:57:39",
+   "close_time": "2026-11-26 14:43:02",
+   "status": "closed",
+   "entry_avg": 0.04,
+   "max_size": 480192.0,
+   "margin_peak": 22019.94,
+   "realized_total": 1901.35,
+   "return_pct": 8.63,
+   "duration_hours": 6.76,
+   "events": 2,
+   "has_close_event": true,
+   "ended_by_reopen": false,
+   "ended_by_snapshot": false
+  },
   {
    "platform": "币安",
    "symbol": "XAUUSDT",
@@ -4244,25 +4250,6 @@
   },
   {
    "platform": "币安",
-   "symbol": "牛来USDT",
-   "side": "long",
-   "origin": "open",
-   "open_time": "2026-11-26 07:57:39",
-   "close_time": null,
-   "status": "open",
-   "entry_avg": 0.04,
-   "max_size": 480192.0,
-   "margin_peak": 20268.54,
-   "realized_total": 0.0,
-   "return_pct": null,
-   "duration_hours": 0.0,
-   "events": 1,
-   "has_close_event": false,
-   "ended_by_reopen": false,
-   "ended_by_snapshot": false
-  },
-  {
-   "platform": "币安",
    "symbol": "NVDAUSDT",
    "side": "long",
    "origin": "open",
@@ -4567,6 +4554,27 @@
   }
  ],
  "events": [
+  {
+   "msg_id": 2775,
+   "time": "2026-11-26 14:43:02",
+   "platform": "币安",
+   "symbol": "牛来USDT",
+   "event": "平仓",
+   "side": "long",
+   "size_after": 0.0,
+   "size_before": 480192.0,
+   "avg_entry": 0.04,
+   "cur_price": 0.05,
+   "margin": 22019.94,
+   "leverage_set": 1.0,
+   "actual_leverage": 0.04,
+   "liq_price": 0.0,
+   "unrealized_pnl": null,
+   "unrealized_pct": null,
+   "realized_pnl": 1901.35,
+   "final_pnl": 1901.35,
+   "final_pct": 8.63
+  },
   {
    "msg_id": 2773,
    "time": "2026-11-26 07:57:39",
@@ -42957,9 +42965,9 @@
   }
  ],
  "_meta": {
-  "source_rows": 1822,
-  "parsed_events": 1828,
-  "failed_blocks": 4,
+  "source_rows": 1824,
+  "parsed_events": 1829,
+  "failed_blocks": 5,
   "failures_sample": [
    {
     "msg_id": 455,
@@ -42979,6 +42987,11 @@
    {
     "msg_id": 2774,
     "time": "2026-11-26 07:57:41",
+    "reason": "no_blocks"
+   },
+   {
+    "msg_id": 2776,
+    "time": "2026-11-26 14:43:07",
     "reason": "no_blocks"
    }
   ],
